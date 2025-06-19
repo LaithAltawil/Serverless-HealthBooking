@@ -59,7 +59,7 @@ export default {
   },
   methods: {
     fetchAppointments() {
-      fetch("https://u1lesqctck.execute-api.us-east-1.amazonaws.com/ServerLess/Appointments")
+      fetch("https://u1lesqctck.execute-api.us-east-1.amazonaws.com/serverless/Appointments")
         .then(res => res.json())
         .then(data => {
           const parsed = JSON.parse(data.body);
@@ -74,7 +74,7 @@ export default {
       console.log("appointmentId:", cleanAppointment.appointmentId);
       console.log(" appointmentId (direct):", appointment.appointmentId);
 
-      const url = `https://u1lesqctck.execute-api.us-east-1.amazonaws.com/ServerLess/Appointments/${Appointments.appointmentId}`;
+      const url = `https://u1lesqctck.execute-api.us-east-1.amazonaws.com/serverless/Appointments/${Appointments.appointmentId}`;
 
       const payload = { status: newStatus };
 
