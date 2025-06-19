@@ -48,11 +48,12 @@ export default {
   },
 
 mounted() {
-  fetch("https://u1lesqctck.execute-api.us-east-1.amazonaws.com/ServerLess/Slots")
-    .then(res => res.json())
-    .then(data => {
-      this.slots = data.filter(s => !s.isBooked).map(s => s.slot);
-    });
+   fetch("https://u1lesqctck.execute-api.us-east-1.amazonaws.com/ServerLess/Slots")
+        .then(res => res.json())
+        .then(data => {
+          const parsed = JSON.parse(data.body);
+          this.appointments = parsed;
+        });
 },
   methods: {
     submitAppointment() {
