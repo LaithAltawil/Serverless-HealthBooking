@@ -74,7 +74,7 @@ export default {
       console.log("appointmentId:", cleanAppointment.appointmentId);
       console.log(" appointmentId (direct):", appointment.appointmentId);
 
-      const url = `https://u1lesqctck.execute-api.us-east-1.amazonaws.com/ServerLess/Appointments/${appointment.appointmentId}`;
+      const url = `https://u1lesqctck.execute-api.us-east-1.amazonaws.com/ServerLess/Appointments/${Appointments.appointmentId}`;
 
       const payload = { status: newStatus };
 
